@@ -1,6 +1,6 @@
-import { getLocationsService } from "../services/location.service.ts";
+import { getLocationsService } from "../services/location.service.js";
 
-export const getLocations = (req, res): void => {
+export const getLocations = (req, res) => {
   try {
     const page = Number(req.query.page) || 1;
     const limit = Number(req.query.limit) || 100;

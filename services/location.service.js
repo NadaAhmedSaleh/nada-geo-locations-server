@@ -1,18 +1,7 @@
 import { faker } from "@faker-js/faker";
 
-interface ILocation {
-  id: number;
-  latitude: number;
-  longitude: number;
-  priorityScore: number;
-  name: string;
-  address: string;
-  country: string;
-  siteType: string;
-}
-
-const generateRandomLocations = (numRecords: number): ILocation[] => {
-  const locations: ILocation[] = [];
+const generateRandomLocations = (numRecords) => {
+  const locations = [];
   for (let i = 0; i < numRecords; i++) {
     locations.push({
       id: i + 1,
@@ -28,8 +17,8 @@ const generateRandomLocations = (numRecords: number): ILocation[] => {
   return locations;
 };
 
-export const getLocationsService = (page: number, limit: number) => {
-  const locationsData: ILocation[] = generateRandomLocations(10000);
+export const getLocationsService = (page, limit) => {
+  const locationsData = generateRandomLocations(10000);
   const startIndex = (page - 1) * limit;
   const endIndex = page * limit;
 

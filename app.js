@@ -1,8 +1,8 @@
 import express from "express";
 import cors from "cors";
 import swaggerUi from "swagger-ui-express";
-import locationsRoutes from "./routes/location.route.ts";
-import { swaggerSpecs } from "./utils/swagger.ts";
+import locationsRoutes from "./routes/location.route.js";
+import { swaggerSpecs } from "./utils/swagger.js";
 
 const app = express();
 
